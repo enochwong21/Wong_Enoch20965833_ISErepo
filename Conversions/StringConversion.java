@@ -2,6 +2,35 @@ import java.util.*;
 
 public class Conversion
 {
+	public static void main(String []args)
+	{
+		mainMenuSelection();
+	}
+	
+	public static void mainMenuSelection()
+	{
+		char returnMain = 0;
+		int option = 0;
+		Scanner sc = new Scanner(System.in);
+		do
+		{
+		System.out.println("Please choose one of the following converter: ");
+		System.out.println("1. Uppercase to Lowercase Converter");
+		System.out.println("2. Lowercase to Uppercase Converter");
+		option = getInt("Enter selection: ", 1, 5);
+		System.out.print("\n");
+		switch(option)
+		{
+		case 1:
+			toLowerCase("");
+			break;
+		
+		case 2:
+			toUpperCase("");
+			break;
+		}
+		}while(option <= 3);
+		
 	public static String toLowerCase(String userInput)
 	{
 		char returnMain = 0;
