@@ -192,6 +192,57 @@ public class Conversion
 		}
 		}while(choice <=2);
 		
-		
+	public static void centiToInchesAndInchesToCenti()
+	{
+		char returnMain = 0;
+		int choice = 0;
+		Scanner input = new Scanner(System.in);
+		do
+		{
+		System.out.println("Please choose one of the following:");
+		System.out.println("1. Convert Centimeters to Inches");
+		System.out.println("2. Convert Inches to Centimeters");
+		System.out.println("3. Return To Main Menu\n");
+		choice = getInt("Enter selection: ", 1, 3);
+		System.out.print("\n");
+		switch(choice)
+		{
+			case 1:
+				try
+				{
+				if(choice == 1)
+				{
+					System.out.print("Enter Value in Centimeters : ");
+					double centimeters = input.nextDouble();
+					double inches = centimeters * 2.54; // need fix
+					System.out.println("\n" + centimeters + " Centimeters = " + inches + " Inches\n");
+				}
+				}
+				catch(InputMismatchException e)
+				{
+					input.nextLine();
+					System.out.println("\nYour value is an non-integer.\n");
+				}
+				break;
+					
+			case 2:
+				try
+				{
+				if(choice == 2)
+				{
+					System.out.print("Enter Value in Inches : ");
+					double inches = input.nextDouble();
+					double centimeters = inches / 0.3937;
+					System.out.println("\n" + inches + " Inches = " + centimeters + " Centimeters\n");
+				}
+				}
+				catch(InputMismatchException e)
+				{
+					input.nextLine();
+					System.out.println("\nYour value is an non-integer.\n");
+				}
+				break;
+		}
+		}while(choice <= 2);
 	
 }
