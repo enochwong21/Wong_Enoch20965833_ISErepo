@@ -31,6 +31,36 @@ public class Conversion
 		}
 		}while(option <= 3);
 		
+	public static int getInt(String msg, int min, int max)
+	{
+		Scanner sc = new Scanner(System.in);
+		int ans = 0;
+		boolean repeat = true;
+		do
+		{
+		try
+		{
+			System.out.print(msg);
+			ans = sc.nextInt();
+			if(ans < min || ans > max)
+			{
+				System.out.println("\nThe input should be within " + min + "-" + max + ".\n");
+			}
+			else
+			{
+				repeat = false;
+			}
+		}
+		catch(InputMismatchException e)
+		{
+			sc.nextLine();
+			System.out.println("\nYour input is an non-integer.\n");
+		}
+		}while(repeat);//repeat when user enter non-integer
+				
+		return ans;
+	}
+	
 	public static String toLowerCase(String userInput)
 	{
 		char returnMain = 0;
