@@ -28,6 +28,13 @@ public class Conversion
 		case 2:
 			toUpperCase("");
 			break;
+		case 3:
+			metersToFeetAndFeetToMeters();
+			break;
+			
+		case 4:
+			centiToInchesAndInchesToCenti();
+			break;
 		}
 		}while(option <= 3);
 		
