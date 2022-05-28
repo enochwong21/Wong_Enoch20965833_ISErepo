@@ -138,5 +138,60 @@ public class Conversion
         // Return result
         return result;
     	}
+    	
+    	public static void metersToFeetAndFeetToMeters()
+	{
+		char returnMain = 0;
+		int choice = 0;
+		Scanner input = new Scanner(System.in);
+		do
+		{
+		System.out.println("Please choose one of the following:");
+		System.out.println("1. Convert Meters to Feet");
+		System.out.println("2. Convert Feet to Meters");
+		System.out.println("3. Return To Main Menu\n");
+		choice = getInt("Enter selection: ", 1, 3);
+		System.out.print("\n");
+		switch(choice)
+		{
+			case 1:
+				try
+				{
+				if(choice == 1)
+				{
+					System.out.print("Enter Value in Meters : ");
+					double meter = input.nextDouble();
+					double feet = meter * 3.28084;
+					System.out.println("\n" + meter + " Meters = " + feet + " Feets\n");
+				}
+				}
+				catch(InputMismatchException e)
+				{
+					input.nextLine();
+					System.out.println("\nYour value is an non-integer.\n");
+				}
+				break;
+			
+			case 2:
+				try
+				{
+				if(choice == 2)
+				{
+					System.out.print("Enter Value in Feet : ");
+					double feet = input.nextDouble();
+					double meter = feet / 0.3048;
+					System.out.println("\n" + feet + " Feets = " + meter + " Meters\n");
+				}
+				}
+				catch(InputMismatchException e)
+				{
+					input.nextLine();
+					System.out.println("\nYour value is an non-integer.\n");
+				}
+				break;
+		}
+		}while(choice <=2);
+		
+		
 	
 }
