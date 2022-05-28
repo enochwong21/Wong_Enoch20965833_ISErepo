@@ -35,6 +35,28 @@ public class Conversion
 		case 4:
 			centiToInchesAndInchesToCenti();
 			break;
+		
+		default:
+			do
+			{
+			System.out.println("Are you sure you want to exit the program? (Y/N)");
+			returnMain = sc.next().charAt(0);
+			System.out.print("\n");
+			if(returnMain == 'Y' || returnMain == 'y')
+			{
+				System.out.println("Goodbye :)");
+				System.exit(0);
+			}
+			else if(returnMain == 'N' || returnMain == 'n')
+			{
+				mainMenuSelection();
+			}
+			else
+			{
+				System.out.println("Please enter Y/y or N/n only!\n");
+			}
+			}while(returnMain != 'Y' || returnMain != 'y' || returnMain != 'N' || returnMain != 'n');
+			break;
 		}
 		}while(option <= 3);
 		
@@ -196,6 +218,26 @@ public class Conversion
 					System.out.println("\nYour value is an non-integer.\n");
 				}
 				break;
+				
+			default:
+				do
+				{
+					System.out.println("Do you want to return to main menu? (Y/N)");
+					returnMain = input.next().charAt(0);
+					System.out.print("\n");
+					if(returnMain == 'Y' || returnMain == 'y')
+				{
+					mainMenuSelection();
+				}
+				else if(returnMain == 'N' || returnMain == 'n')
+				{
+					metersToFeetAndFeetToMeters();
+				}
+				else
+				{
+					System.out.println("Please enter Y/y or N/n only!\n");
+				}
+				}while(returnMain != 'Y' || returnMain != 'y' || returnMain != 'N' || returnMain != 'n');
 		}
 		}while(choice <=2);
 		
@@ -249,6 +291,26 @@ public class Conversion
 					System.out.println("\nYour value is an non-integer.\n");
 				}
 				break;
+				
+			default:
+				do
+				{
+					System.out.println("Do you want to return to main menu? (Y/N)");
+					returnMain = input.next().charAt(0);
+					System.out.print("\n");
+				if(returnMain == 'Y' || returnMain == 'y')
+				{
+					mainMenuSelection();
+				}
+				else if(returnMain == 'N' || returnMain == 'n')
+				{
+					metersToFeetAndFeetToMeters();
+				}
+				else
+				{
+					System.out.println("Please enter Y/y or N/n only!\n");
+				}
+				}while(returnMain != 'Y' || returnMain != 'y' || returnMain != 'N' || returnMain != 'n');
 		}
 		}while(choice <= 2);
 	
