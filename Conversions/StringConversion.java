@@ -44,5 +44,17 @@ public class Conversion
 		}while(repeat);
 	}
 	
-	
+	public static StringBuilder checkNumericInString(String input)
+	{
+		char[] chars = input.toCharArray();
+		StringBuilder sb = new StringBuilder();
+		for(char c : chars)
+		{
+			if(Character.isDigit(c))
+			{
+				sb.append(c);
+			}
+		}
+		return sb;
+	}
 }
